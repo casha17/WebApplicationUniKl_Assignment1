@@ -1,0 +1,30 @@
+@page
+@model Assignment1.Pages.Measurement.Temperature
+
+<div class="container-fluid">
+    
+    <div class="row">
+        <div class="col">
+            <form method="post">
+            <span> Enter Fahrenheit</span> <input type="text" asp-for="TemperatureViewModel.Fahrenheit"/> <button asp-page-handler="Fahr" type="submit" class="btn-primary">Calculate</button>
+                
+                <span asp-validation-for="TemperatureViewModel.Fahrenheit"></span>
+                <br/>
+            <span> result in celcius @Model.TemperatureViewModel.Celcius </span>
+            </form>
+        </div>
+        
+        
+        <div class="col">
+            <form method="post">
+                
+           
+            <span> Enter Celsius</span> <input type="text" asp-for="TemperatureViewModel.Celcius"/> <button asp-page-handler="Celc" type="submit" class="btn-primary">Calculate</button>
+                <span asp-validation-for="TemperatureViewModel.Celcius"></span>
+                <br/>
+            <span> result in Fahrenheit @Model.TemperatureViewModel.Fahrenheit </span>
+             </form>
+        </div>
+        
+    </div>
+</div>

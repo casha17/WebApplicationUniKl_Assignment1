@@ -1,0 +1,59 @@
+@page
+@model Assignment1.Pages.Measurement.LoanResult
+
+
+
+<p> In the following table you can see how much you should pay each month and what is left</p>
+
+<form method="post">
+    
+
+<button class="btn btn-primary">Go Back</button>
+</form>
+<div class="container-fluid">
+    
+    <div class="row justify-content-center">
+        <div class="col"> 
+
+            <table>
+                <tr>
+                    <th> Month left</th>
+                    <th> Payment</th>
+                    <th> Total Amount left</th>
+
+                </tr>
+                @{
+                    var months = Model.LoanViewModel.Years * 12;
+                    var length = 0;
+                }
+
+                @for (double i = Model.LoanViewModel.TotalPayment; i > 10; i -= Model.LoanViewModel.MonthlyPayment)
+                {
+
+                  
+                    <tr>
+                        <td>
+                            @months
+                        </td>
+                        <td>@Model.LoanViewModel.MonthlyPayment.ToString("F1")</td>
+                        <td>
+                            @Model.LoanViewModel.TotalPayment.ToString("F1")
+                        </td>
+                    </tr>
+
+                    Model.LoanViewModel.TotalPayment -= Model.LoanViewModel.MonthlyPayment;
+                    months--;
+                    length++;
+                }
+
+
+
+
+
+            </table>
+        </div>
+        
+
+    </div>
+    
+</div>

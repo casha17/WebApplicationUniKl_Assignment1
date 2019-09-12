@@ -1,0 +1,42 @@
+@page
+@model Assignment1.Pages.Measurement.size
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <form method="post">
+            <span asp-validation-for="SizeViewModel.Value"></span> <br/>    
+                <input asp-for="SizeViewModel.Value" type="text"/> 
+                
+                <select name="from">
+                <option value="mililiter">Mililiter</option>
+                <option value="centiliter">Centiliter</option>
+                <option value="deciliter">Deciliter</option>
+                <option value="liter">liter</option>
+                <option value="kiloliters">Kiloliters</option>
+                
+            </select>
+            
+            to 
+            <select name="to">
+                <option value="mililiter">Mililiter</option>
+                <option value="centiliter">Centiliter</option>
+                
+                <option value="deciliter">Deciliter</option>
+                
+                <option value="liter">liter</option>
+                
+                <option value="kiloliters">Kiloliters</option>
+                
+            </select>
+            <button class="btn btn-primary">Convert</button>
+            <p>@Model.SizeViewModel.Result</p>
+            </form>
+        </div>
+        
+        
+        
+        
+    </div>
+</div>

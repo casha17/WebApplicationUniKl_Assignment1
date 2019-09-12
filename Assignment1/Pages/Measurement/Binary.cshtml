@@ -1,0 +1,42 @@
+@page
+@model Assignment1.Pages.Measurement.Binary
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <form method="post">
+                
+                <h3>Convert Binary to Decimal</h3>
+                <p>Enter Binary</p>
+
+                <input asp-for="BinaryViewModel.Binary" type="number"/> <br/>
+                <span asp-validation-for="BinaryViewModel.Binary"></span>
+
+                <button asp-page-handler="dec" type="submit">Convert</button>
+
+
+                <p>Decimal: @Model.BinaryViewModel.Decimal</p>
+                <p></p>
+            </form>
+
+        </div>
+        
+        <div class="col">
+            <form method="post">
+                <h3> Convert Binary to Hex</h3>
+                <p>Enter Binary</p>
+
+                <input asp-for="BinaryViewModel.Binary" type="number"/> <br/>
+                <span asp-validation-for="BinaryViewModel.Binary"></span>
+
+                <button asp-page-handler="hex" type="submit">Convert</button>
+
+
+                <p>Hex: @Model.BinaryViewModel.Hex</p>
+                <p></p>
+            </form>
+
+        </div>
+    </div>
+</div>

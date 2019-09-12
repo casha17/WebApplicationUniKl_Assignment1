@@ -1,0 +1,22 @@
+@page
+@model Assignment1.Pages.Measurement.currencyResult
+
+<form method="post">
+<div class="container-fluid">
+    
+    <div class="row justify-content-center">
+        
+        <div style="    flex-grow: inherit;"  class="col">
+            <span>Danish</span>  <input type="text" asp-for="CurrencyViewModel.Danish" />
+            <span>Ringit</span>  <input type="text" asp-for="CurrencyViewModel.Ringit" />
+            <span>Euro</span>  <input type="text" asp-for="CurrencyViewModel.Euro" />
+            <span>Dollars</span>  <input type="text"  asp-for="CurrencyViewModel.Dollars"/>
+            <span>Thai baht</span>  <input type="text"  asp-for="CurrencyViewModel.Thai"/>
+            <span>Pound</span>  <input type="text" asp-for="CurrencyViewModel.Pound" />
+            
+            <button class="btn-primary" type="submit">Go Back</button>
+        </div>
+    </div>
+
+</div>
+</form>

@@ -1,0 +1,103 @@
+@page
+@model Assignment1.Pages.Measurement.length
+
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-6">
+            
+        
+            <form method="post">
+                <div>
+                    <h2>Centimeter to meter</h2>
+                    <p>Enter centimeter</p> <input asp-for="LengthViewModel.Centimeter" type="text"/>
+                    <span asp-validation-for="LengthViewModel.Centimeter"></span>
+                    <button type="submit" asp-page-handler="centimeter" class="btn-primary">Calculate</button>
+                    <p>result: </p> <span>@Model.LengthViewModel.Meter Meter</span>
+                </div>
+            </form>
+        </div>
+        
+        <div class="col-6">
+
+            <form method="post">
+                <div>
+                    <h2>meter to Centimeter</h2>
+                    <p>Enter meter</p> <input asp-for="LengthViewModel.Meter" type="text"/>
+                    <button type="submit" asp-page-handler="meter" class="btn-primary">Calculate</button>
+                    <p>result: </p> <span>@Model.LengthViewModel.Centimeter Centimeter</span>
+                </div>
+            </form>
+        </div>
+        
+    </div>
+    
+</div>
+
+<div class="container-fluid py-5">
+    <div class="row">
+        <div class="col-6">
+            
+        
+            <form method="post">
+                <div>
+                    <h2>Feet to meter</h2>
+                    <p>Enter Feet</p> <input asp-for="LengthViewModel.Feet" type="text"/>
+                    <button type="submit" asp-page-handler="feet" class="btn-primary">Calculate</button>
+                    <p>result: </p> <span>@Model.LengthViewModel.FeetMeter Meter</span>
+                </div>
+            </form>
+        </div>
+        
+        <div class="col-6">
+
+            <form method="post">
+                <div>
+                    <h2>Meter to Feet</h2>
+                    <p>Enter Meter</p> <input asp-for="LengthViewModel.FeetMeter" type="text"/>
+                    <button type="submit" asp-page-handler="meterToFeet" class="btn-primary">Calculate</button>
+                    <p>result: </p> <span>@Model.LengthViewModel.Feet Centimeter</span>
+                </div>
+            </form>
+        </div>
+        
+    </div>
+    
+</div>
+
+
+<div class="container-fluid py-5">
+    <div class="row">
+        <div class="col-6">
+            
+        
+            <form method="post">
+                <div>
+                    <h2>Mile to meter</h2>
+                    <p>Enter Mile</p> <input asp-for="LengthViewModel.Mile" type="text"/>
+                    <button type="submit" asp-page-handler="mile" class="btn-primary">Calculate</button>
+                    <p>result: </p> <span>@Model.LengthViewModel.MileMeter Meter</span>
+                </div>
+            </form>
+        </div>
+        
+        <div class="col-6">
+
+            <form method="post">
+                <div>
+                    <h2>Meter to Mile</h2>
+                    <p>Enter Meter</p> <input asp-for="LengthViewModel.MileMeter" type="text"/>
+                    <button type="submit" asp-page-handler="meterToMile" class="btn-primary">Calculate</button>
+                    <p>result: </p> <span>@Model.LengthViewModel.Mile Centimeter</span>
+                </div>
+            </form>
+        </div>
+        
+    </div>
+    
+</div>
+
+
+
+

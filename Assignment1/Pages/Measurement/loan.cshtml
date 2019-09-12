@@ -1,0 +1,20 @@
+@page
+@model Assignment1.Pages.Measurement.loan
+
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col">
+            <form method="post">
+                <p>Loan Amount</p> <input asp-for="LoanViewModel.LoanAmount"/>
+                <span asp-validation-for="LoanViewModel.LoanAmount"></span>
+            
+                <p>Annual interest rate</p> <input asp-for="LoanViewModel.AnnualInterestRate"/>
+                <span asp-validation-for="LoanViewModel.AnnualInterestRate"></span>
+            
+                <p>Amount of years</p> <input asp-for="LoanViewModel.Years"/>
+                <span asp-validation-for="LoanViewModel.Years"></span>
+            <button class="btn btn-primary" type="submit">Calculate</button>
+            </form>
+        </div>
+    </div>
+</div>
